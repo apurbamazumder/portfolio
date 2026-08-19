@@ -1,0 +1,4446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apurba Mazumder | Digital Marketing Trainer & HR Professional</title>
+
+  <meta name="description"
+        content="Apurba Mazumder is a Digital Marketing Trainer and HR Professional focused on practical learning, professional development, people management and digital growth.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESPONSIVE / DEVICE SMOOTHNESS
+========================================= */
+
+html{
+  width:100%;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+body{
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+button,
+input,
+textarea{
+  font-family:inherit;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root{
+  --bg:#050507;
+  --card:#101014;
+  --white:#f5f5f7;
+  --muted:#92929f;
+  --border:rgba(255,255,255,.1);
+
+  --accent:#8b5cf6;
+  --accent2:#22d3ee;
+  --accent3:#ec4899;
+
+  --container:1200px;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:"Inter",sans-serif;
+  overflow-x:hidden;
+}
+
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+.cursor{
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  height:82px;
+
+  padding-left:max(5%,env(safe-area-inset-left));
+  padding-right:max(5%,env(safe-area-inset-right));
+
+  display:flex;
+  align-items:center;
+
+  background:rgba(5,5,7,.18);
+
+  transition:
+    background .4s ease,
+    height .4s ease,
+    backdrop-filter .4s ease;
+}
+
+.navbar.scrolled{
+  height:68px;
+
+  background:rgba(8,8,8,.82);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.nav-container{
+  width:100%;
+  max-width:var(--container);
+  height:100%;
+
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  min-width:0;
+}
+
+.logo{
+  flex-shrink:0;
+
+  font-family:"Space Grotesk",sans-serif;
+  font-size:28px;
+  font-weight:700;
+
+  line-height:.85;
+  letter-spacing:-2px;
+
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:32px;
+
+  margin-left:auto;
+  margin-right:30px;
+}
+
+.nav-links a{
+  font-size:13px;
+  color:#aaa;
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:#fff;
+}
+
+.nav-btn{
+  flex-shrink:0;
+
+  padding:11px 18px;
+
+  border:1px solid var(--border);
+  border-radius:100px;
+
+  font-size:13px;
+
+  transition:.3s;
+}
+
+.nav-btn span{
+  color:var(--accent);
+}
+
+.nav-btn:hover{
+  border-color:var(--accent);
+  transform:translateY(-2px);
+}
+
+.menu-btn{
+  display:none;
+
+  background:none;
+  border:none;
+
+  cursor:pointer;
+
+  padding:10px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  min-height:100svh;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  /*
+    IMPORTANT:
+    Fixed navbar er jonno hero content
+    navbar er niche theke start korbe.
+  */
+
+  padding-top:82px;
+  padding-bottom:40px;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:-20%;
+
+  background:
+    radial-gradient(
+      circle at 72% 42%,
+      rgba(139,92,246,.25),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 82% 68%,
+      rgba(34,211,238,.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(236,72,153,.12),
+      transparent 25%
+    );
+
+  animation:aurora 12s ease-in-out infinite alternate;
+}
+
+.hero-bg:after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      115deg,
+      rgba(5,5,7,.95),
+      rgba(5,5,7,.55),
+      rgba(5,5,7,.9)
+    );
+}
+
+@keyframes aurora{
+
+  0%{
+    transform:
+      scale(1)
+      translate3d(-2%,0,0);
+  }
+
+  50%{
+    transform:
+      scale(1.08)
+      translate3d(2%,-1%,0);
+  }
+
+  100%{
+    transform:
+      scale(1.02)
+      translate3d(-1%,2%,0);
+  }
+
+}
+
+.hero-container{
+  width:90%;
+  max-width:var(--container);
+
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+
+  gap:80px;
+
+  align-items:center;
+
+  /*
+    No transform here.
+    Previously transform:translateY(48px)
+    was causing positioning problems.
+  */
+}
+
+.hero-left{
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  color:var(--accent);
+
+  font-size:11px;
+
+  letter-spacing:3px;
+
+  margin-bottom:20px;
+
+  line-height:1.4;
+}
+
+.hero h1{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(55px,7vw,105px);
+
+  line-height:.92;
+
+  letter-spacing:-6px;
+
+  max-width:850px;
+
+  overflow-wrap:anywhere;
+}
+
+.gradient-text{
+  display:block;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--accent),
+      var(--accent2) 48%,
+      var(--accent3)
+    );
+
+  background-size:200% auto;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  animation:gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove{
+
+  0%,
+  100%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+}
+
+.hero-description{
+  max-width:600px;
+
+  margin-top:35px;
+
+  color:#999;
+
+  font-size:17px;
+
+  line-height:1.8;
+}
+
+.hero-buttons{
+  display:flex;
+
+  gap:15px;
+
+  margin-top:40px;
+}
+
+.primary-btn,
+.secondary-btn{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:18px;
+
+  padding:15px 22px;
+
+  border-radius:100px;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  transition:.35s;
+
+  touch-action:manipulation;
+
+  -webkit-tap-highlight-color:transparent;
+}
+
+.primary-btn{
+  color:#050507;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--accent),
+      var(--accent2)
+    );
+
+  background-size:180% auto;
+}
+
+.primary-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 15px 45px rgba(139,92,246,.3);
+
+  background-position:100% 50%;
+}
+
+.primary-btn span{
+  font-size:18px;
+}
+
+.secondary-btn{
+  border:1px solid var(--border);
+
+  color:#ddd;
+
+  background:rgba(255,255,255,.02);
+}
+
+.secondary-btn:hover{
+  border-color:rgba(139,92,246,.55);
+
+  transform:translateY(-4px);
+
+  background:rgba(139,92,246,.08);
+}
+
+.hero-socials{
+  display:flex;
+
+  gap:10px;
+
+  margin-top:35px;
+}
+
+.hero-socials a{
+  width:36px;
+  height:36px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid var(--border);
+
+  border-radius:50%;
+
+  color:#aaa;
+
+  font-size:11px;
+
+  transition:.3s;
+
+  touch-action:manipulation;
+
+  -webkit-tap-highlight-color:transparent;
+}
+
+.hero-socials a:hover{
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+
+  color:#000;
+
+  transform:translateY(-4px);
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-right{
+  display:flex;
+
+  justify-content:center;
+
+  position:relative;
+  z-index:2;
+}
+
+.hero-card{
+  width:100%;
+  max-width:430px;
+
+  aspect-ratio:.8;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24,20,38,.9),
+      rgba(8,8,12,.95)
+    );
+
+  border:
+    1px solid rgba(139,92,246,.25);
+
+  border-radius:25px;
+
+  padding:25px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  transform:rotate(3deg);
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.45);
+}
+
+.hero-card:before{
+  content:"";
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  left:-80px;
+  top:-80px;
+
+  border-radius:50%;
+
+  background:rgba(236,72,153,.15);
+
+  filter:blur(45px);
+
+  animation:blob 7s ease-in-out infinite alternate;
+}
+
+.hero-card:after{
+  content:"";
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  right:-80px;
+  bottom:-80px;
+
+  border-radius:50%;
+
+  background:rgba(34,211,238,.14);
+
+  filter:blur(45px);
+
+  animation:
+    blob 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blob{
+
+  to{
+    transform:
+      translate(45px,35px)
+      scale(1.2);
+  }
+
+}
+
+.card-top,
+.card-bottom{
+  display:flex;
+
+  justify-content:space-between;
+
+  color:#666;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  position:relative;
+
+  z-index:3;
+}
+
+.card-bottom{
+  position:absolute;
+
+  bottom:25px;
+
+  left:25px;
+  right:25px;
+}
+
+.hero-photo{
+  position:absolute;
+
+  inset:0;
+
+  overflow:hidden;
+}
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  object-position:58% 42%;
+
+  display:block;
+
+  filter:
+    saturate(.82)
+    contrast(1.04);
+
+  transform:scale(1.03);
+
+  transition:transform .8s ease;
+}
+
+.hero-card:hover .hero-photo img{
+  transform:scale(1.07);
+}
+
+.hero-photo-overlay{
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,5,7,.2),
+      rgba(5,5,7,.03) 42%,
+      rgba(5,5,7,.72)
+    ),
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,.18),
+      transparent 45%,
+      rgba(34,211,238,.12)
+    );
+
+  pointer-events:none;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator{
+  position:absolute;
+
+  left:50%;
+  bottom:28px;
+
+  transform:translateX(-50%);
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  color:#555;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  z-index:5;
+
+  white-space:nowrap;
+}
+
+.scroll-indicator div{
+  width:34px;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      var(--accent2)
+    );
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.marquee-section{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+
+  overflow:hidden;
+
+  padding:20px 0;
+}
+
+.marquee{
+  width:max-content;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:35px;
+
+  animation:
+    marquee 25s linear infinite;
+
+  color:#666;
+
+  font-family:"Space Grotesk";
+
+  font-size:14px;
+
+  letter-spacing:2px;
+}
+
+.marquee i{
+  color:var(--accent);
+}
+
+@keyframes marquee{
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section{
+  width:90%;
+  max-width:var(--container);
+
+  margin:auto;
+
+  padding:150px 0;
+}
+
+.section-heading{
+  display:grid;
+
+  grid-template-columns:100px 1fr;
+
+  margin-bottom:80px;
+}
+
+.section-number{
+  color:var(--accent);
+
+  font-size:12px;
+}
+
+.section-heading h2{
+  font-family:"Space Grotesk";
+
+  font-size:clamp(40px,5vw,70px);
+
+  line-height:1;
+
+  letter-spacing:-4px;
+
+  max-width:750px;
+
+  overflow-wrap:anywhere;
+}
+
+.section-heading h2 span{
+  color:#555;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-grid{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:100px;
+}
+
+.about-text{
+  max-width:650px;
+}
+
+.large-text{
+  font-family:"Space Grotesk";
+
+  font-size:28px;
+
+  line-height:1.4;
+
+  margin-bottom:30px;
+}
+
+.about-text p:not(.large-text){
+  color:#888;
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+}
+
+.about-text strong{
+  color:#fff;
+}
+
+.text-link{
+  display:inline-flex;
+
+  gap:15px;
+
+  margin-top:25px;
+
+  color:var(--accent);
+
+  font-size:13px;
+}
+
+.about-stats{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  border-top:1px solid var(--border);
+}
+
+.stat{
+  padding:30px 10px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.stat:nth-child(odd){
+  border-right:1px solid var(--border);
+}
+
+.stat strong{
+  display:block;
+
+  font-family:"Space Grotesk";
+
+  font-size:45px;
+
+  color:#fff;
+
+  margin-bottom:8px;
+}
+
+.stat span{
+  color:#666;
+
+  font-size:11px;
+}
+
+
+/* =========================================
+   EXPERTISE
+========================================= */
+
+.expertise{
+  background:#0a0a0a;
+  padding-bottom:70px;
+
+  max-width:none;
+
+  width:100%;
+
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.expertise .section-heading,
+.expertise-grid{
+  max-width:var(--container);
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.expertise-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1px;
+
+  background:var(--border);
+  border:1px solid var(--border);
+}
+
+.service-card{
+  min-height:340px;
+
+  padding:35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101014,
+      #09090c
+    );
+
+  position:relative;
+
+  transition:.5s;
+
+  overflow:hidden;
+}
+
+.service-card:before{
+  content:"";
+
+  position:absolute;
+
+  width:130px;
+  height:130px;
+
+  right:-60px;
+  top:-60px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,.2),
+      rgba(34,211,238,.08)
+    );
+
+  filter:blur(10px);
+
+  transition:.5s;
+}
+
+.service-card:hover{
+  background:
+    linear-gradient(
+      145deg,
+      #15121f,
+      #0b1015
+    );
+
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(139,92,246,.25);
+}
+
+.service-card:hover:before{
+  transform:scale(1.5);
+}
+
+.service-number{
+  color:#555;
+
+  font-size:11px;
+}
+
+.service-icon{
+  position:absolute;
+
+  top:35px;
+  right:35px;
+
+  color:var(--accent2);
+
+  font-size:25px;
+}
+
+.service-label{
+  margin-top:20px;
+
+  color:#555;
+
+  font-size:9px;
+
+  letter-spacing:1.5px;
+}
+
+.service-card h3{
+  font-family:"Space Grotesk";
+
+  font-size:25px;
+
+  margin-top:55px;
+
+  margin-bottom:15px;
+}
+
+.service-card p{
+  color:#777;
+
+  font-size:14px;
+
+  line-height:1.7;
+}
+
+.tags,
+.project-tags{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin-top:25px;
+}
+
+.tags span,
+.project-tags span{
+  padding:6px 9px;
+
+  border:
+    1px solid rgba(139,92,246,.18);
+
+  border-radius:100px;
+
+  color:#777;
+
+  font-size:9px;
+
+  background:
+    rgba(139,92,246,.03);
+}
+
+
+/* =========================================
+   PROJECTS — TEXT ONLY
+========================================= */
+
+.projects-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border-top:1px solid var(--border);
+}
+
+.project{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:45px;
+  align-items:start;
+  padding:48px 0;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  transition:padding .35s ease, background .35s ease;
+}
+
+.project.reverse{
+  grid-template-columns:100px 1fr;
+}
+
+.project.reverse .project-info{
+  order:0;
+}
+
+.project::before{
+  content:"";
+  position:absolute;
+  left:-20px;
+  right:-20px;
+  top:0;
+  bottom:0;
+  background:linear-gradient(
+    90deg,
+    rgba(139,92,246,.06),
+    rgba(34,211,238,.025),
+    transparent
+  );
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s ease;
+}
+
+.project:hover::before{
+  opacity:1;
+}
+
+.project:hover{
+  padding-left:12px;
+  padding-right:12px;
+}
+
+.project-number{
+  color:#555;
+  font-size:10px;
+  letter-spacing:2px;
+  padding-top:3px;
+  position:relative;
+  z-index:1;
+}
+
+.project-info{
+  max-width:850px;
+  position:relative;
+  z-index:1;
+}
+
+.project-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  color:#555;
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.project-meta span:first-child{
+  display:none;
+}
+
+.project-meta span:last-child{
+  color:var(--accent);
+}
+
+.project-info h3{
+  font-family:"Space Grotesk";
+  font-size:clamp(28px,3vw,42px);
+  letter-spacing:-2px;
+  line-height:1.05;
+  margin-bottom:18px;
+  transition:color .3s ease;
+}
+
+.project:hover .project-info h3{
+  color:#fff;
+}
+
+.project-info p{
+  color:#777;
+  line-height:1.8;
+  max-width:720px;
+  font-size:14px;
+}
+
+.project-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:22px;
+}
+
+.project-tags span{
+  padding:6px 10px;
+  border:1px solid rgba(139,92,246,.18);
+  border-radius:100px;
+  color:#777;
+  font-size:9px;
+  background:rgba(139,92,246,.03);
+  transition:.3s ease;
+}
+
+.project:hover .project-tags span{
+  border-color:rgba(139,92,246,.32);
+  color:#aaa;
+}
+
+@media(max-width:900px){
+
+  .project,
+  .project.reverse{
+    grid-template-columns:55px 1fr;
+    gap:22px;
+    padding:35px 0;
+  }
+
+  .project:hover{
+    padding-left:6px;
+    padding-right:6px;
+  }
+
+  .project-number{
+    font-size:8px;
+    letter-spacing:1.5px;
+  }
+
+  .project-meta{
+    justify-content:flex-start;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:7px;
+    margin-bottom:16px;
+  }
+
+  .project-info h3{
+    font-size:30px;
+    letter-spacing:-1.5px;
+  }
+
+  .project-info p{
+    font-size:13px;
+    line-height:1.7;
+  }
+
+}
+
+@media(max-width:600px){
+  .expertise{padding-bottom:45px;}
+  .client-reviews{padding-top:45px;}
+
+  .projects-list{
+    margin-top:5px;
+  }
+
+  .project,
+  .project.reverse{
+    grid-template-columns:32px 1fr;
+    gap:16px;
+    padding:30px 0;
+  }
+
+  .project::before{
+    left:-10px;
+    right:-10px;
+  }
+
+  .project:hover{
+    padding-left:4px;
+    padding-right:4px;
+  }
+
+  .project-number{
+    font-size:7px;
+    letter-spacing:1px;
+  }
+
+  .project-meta{
+    font-size:8px;
+    letter-spacing:1.5px;
+    margin-bottom:14px;
+  }
+
+  .project-info h3{
+    font-size:25px;
+    letter-spacing:-1.2px;
+    line-height:1.08;
+    margin-bottom:13px;
+  }
+
+  .project-info p{
+    font-size:12px;
+    line-height:1.7;
+  }
+
+  .project-tags{
+    margin-top:17px;
+    gap:6px;
+  }
+
+  .project-tags span{
+    padding:5px 8px;
+    font-size:8px;
+  }
+
+}
+
+@media(max-width:390px){
+
+  .project,
+  .project.reverse{
+    grid-template-columns:26px 1fr;
+    gap:13px;
+  }
+
+  .project-info h3{
+    font-size:23px;
+  }
+
+}
+
+/* =========================================
+   CERTIFICATES
+========================================= */
+
+.certificates{
+  position:relative;
+}
+
+.certificate-intro{
+  max-width:650px;
+
+  color:#777;
+
+  line-height:1.8;
+
+  margin:-35px 0 55px 100px;
+}
+
+.certificate-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+}
+
+.certificate-card{
+  background:
+    linear-gradient(
+      145deg,
+      #151515,
+      #0c0c0c
+    );
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  transition:.45s;
+
+  position:relative;
+}
+
+.certificate-card:hover{
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(139,92,246,.45);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.35);
+}
+
+.certificate-image{
+  aspect-ratio:1.414/1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1c1c1c,
+      #090909
+    );
+
+  display:grid;
+
+  place-items:center;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+.certificate-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.5s;
+}
+
+.certificate-card:hover
+.certificate-image img{
+  transform:scale(1.04);
+}
+
+.certificate-content{
+  padding:22px;
+}
+
+.certificate-content h3{
+  font-family:"Space Grotesk";
+
+  font-size:20px;
+
+  margin-bottom:8px;
+}
+
+.certificate-content p{
+  font-size:12px;
+
+  color:#666;
+
+  line-height:1.6;
+}
+
+.certificate-badge{
+  display:inline-flex;
+
+  margin-top:15px;
+
+  padding:6px 10px;
+
+  border:
+    1px solid rgba(139,92,246,.25);
+
+  border-radius:100px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience{
+  border-top:1px solid var(--border);
+}
+
+.timeline{
+  position:relative;
+
+  max-width:900px;
+
+  margin:auto;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+
+  left:170px;
+
+  top:0;
+  bottom:0;
+
+  width:1px;
+
+  background:var(--border);
+}
+
+.timeline-item{
+  display:grid;
+
+  grid-template-columns:170px 1fr;
+
+  gap:40px;
+
+  padding:35px 0;
+
+  position:relative;
+}
+
+.timeline-date{
+  color:#555;
+
+  font-size:10px;
+
+  padding-top:5px;
+}
+
+.timeline-dot{
+  position:absolute;
+
+  left:165px;
+
+  top:40px;
+
+  width:11px;
+  height:11px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+
+  transform:translateX(-50%);
+
+  box-shadow:
+    0 0 20px rgba(139,92,246,.45);
+
+  animation:
+    dotPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes dotPulse{
+
+  50%{
+    box-shadow:
+      0 0 30px rgba(34,211,238,.5);
+  }
+
+}
+
+.timeline-content{
+  padding-left:35px;
+}
+
+.timeline-content h3{
+  font-family:"Space Grotesk";
+
+  font-size:25px;
+
+  margin-bottom:12px;
+}
+
+.timeline-content p{
+  color:#777;
+
+  line-height:1.7;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta{
+  min-height:650px;
+
+  display:grid;
+
+  place-items:center;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.cta-glow{
+  position:absolute;
+
+  width:600px;
+  height:600px;
+
+  border-radius:50%;
+
+  background:
+    conic-gradient(
+      from 0deg,
+      rgba(139,92,246,.2),
+      rgba(34,211,238,.15),
+      rgba(236,72,153,.18),
+      rgba(139,92,246,.2)
+    );
+
+  filter:blur(100px);
+
+  animation:
+    ctaSpin 14s linear infinite;
+}
+
+@keyframes ctaSpin{
+
+  to{
+    transform:
+      rotate(360deg)
+      scale(1.1);
+  }
+
+}
+
+.cta-content{
+  position:relative;
+
+  z-index:2;
+}
+
+.cta h2{
+  font-family:"Space Grotesk";
+
+  font-size:clamp(50px,7vw,90px);
+
+  letter-spacing:-5px;
+
+  line-height:.95;
+
+  max-width:900px;
+
+  margin-bottom:45px;
+
+  overflow-wrap:anywhere;
+}
+
+.cta h2 span{
+  background:
+    linear-gradient(
+      100deg,
+      var(--accent),
+      var(--accent2),
+      var(--accent3)
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  background-size:200% auto;
+
+  animation:
+    gradientMove 5s ease infinite;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-grid{
+  display:grid;
+
+  grid-template-columns:.8fr 1.2fr;
+
+  gap:120px;
+}
+
+.contact-left p{
+  color:#777;
+
+  line-height:1.8;
+
+  max-width:400px;
+
+  margin-bottom:35px;
+}
+
+.email-link{
+  font-family:"Space Grotesk";
+
+  font-size:25px;
+
+  border-bottom:1px solid #444;
+
+  padding-bottom:10px;
+
+  overflow-wrap:anywhere;
+}
+
+.email-link span{
+  color:var(--accent);
+}
+
+.contact-form{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:25px;
+}
+
+.input-group{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.input-group label{
+  color:#666;
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+.input-group input,
+.input-group textarea{
+  background:transparent;
+
+  border:none;
+
+  border-bottom:
+    1px solid var(--border);
+
+  padding:15px 0;
+
+  outline:none;
+
+  color:#fff;
+
+  font-size:15px;
+
+  resize:vertical;
+
+  transition:.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+  border-color:var(--accent);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+  color:#444;
+}
+
+.form-btn{
+  border:none;
+
+  cursor:pointer;
+
+  width:fit-content;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+  width:90%;
+
+  max-width:var(--container);
+
+  margin:auto;
+
+  padding:50px 0 30px;
+}
+
+.footer-top{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding-bottom:40px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.footer-top p{
+  color:#555;
+
+  font-size:12px;
+}
+
+.footer-socials{
+  display:flex;
+
+  gap:10px;
+}
+
+.footer-socials a{
+  width:35px;
+  height:35px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
+  color:#777;
+
+  font-size:10px;
+
+  transition:.3s;
+}
+
+.footer-socials a:hover{
+  background:var(--accent);
+
+  color:#000;
+}
+
+.footer-bottom{
+  display:flex;
+
+  justify-content:space-between;
+
+  padding-top:25px;
+
+  color:#444;
+
+  font-size:10px;
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.reveal{
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.reveal.visible{
+  opacity:1;
+
+  transform:translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1199px){
+
+  .nav-links{
+    gap:18px;
+
+    margin-right:20px;
+  }
+
+  .nav-links a{
+    font-size:11px;
+  }
+
+  .hero-container{
+    gap:45px;
+  }
+
+  .hero h1{
+    font-size:
+      clamp(52px,7vw,78px);
+  }
+
+  .section{
+    padding:120px 0;
+  }
+
+  .section-heading{
+    margin-bottom:60px;
+  }
+
+  .about-grid{
+    gap:55px;
+  }
+
+  .contact-grid{
+    gap:60px;
+  }
+
+  .project{
+    gap:45px;
+  }
+
+  .project-info h3{
+    font-size:34px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media(max-width:900px){
+
+  .navbar{
+    height:62px;
+
+    padding-top:
+      max(8px,env(safe-area-inset-top));
+
+    padding-bottom:8px;
+
+    padding-left:
+      max(16px,env(safe-area-inset-left));
+
+    padding-right:
+      max(16px,env(safe-area-inset-right));
+  }
+
+  .navbar.scrolled{
+    height:58px;
+
+    padding-top:
+      max(6px,env(safe-area-inset-top));
+
+    padding-bottom:6px;
+  }
+
+  .nav-links,
+  .nav-btn{
+    display:none;
+  }
+
+  .logo{
+    font-size:23px;
+
+    letter-spacing:-1.6px;
+  }
+
+  .menu-btn{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:10px;
+
+    margin:-10px;
+
+    touch-action:manipulation;
+  }
+
+  .menu-btn span{
+    width:24px;
+
+    height:1px;
+
+    background:#fff;
+
+    transition:.3s;
+  }
+
+  .menu-btn.open span:first-child{
+    transform:
+      translateY(3.5px)
+      rotate(45deg);
+  }
+
+  .menu-btn.open span:last-child{
+    transform:
+      translateY(-3.5px)
+      rotate(-45deg);
+  }
+
+  .nav-links.mobile-open{
+    position:fixed;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:0;
+
+    top:
+      calc(
+        62px +
+        env(safe-area-inset-top)
+      );
+
+    left:16px;
+
+    right:16px;
+
+    padding:12px;
+
+    background:
+      rgba(12,10,18,.96);
+
+    border:
+      1px solid rgba(139,92,246,.2);
+
+    border-radius:18px;
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:
+      0 20px 60px rgba(0,0,0,.45);
+
+    z-index:1001;
+  }
+
+  .nav-links.mobile-open a{
+    width:100%;
+
+    padding:14px 12px;
+
+    font-size:13px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.06);
+  }
+
+  .nav-links.mobile-open a:last-child{
+    border-bottom:0;
+  }
+
+  /*
+    MOBILE HERO FIX
+  */
+
+  .hero{
+    min-height:100svh;
+
+    padding-top:90px;
+
+    padding-bottom:78px;
+  }
+
+  .hero-container{
+    grid-template-columns:1fr;
+
+    width:
+      min(
+        calc(100% - 32px),
+        720px
+      );
+
+    padding-top:0;
+
+    transform:none;
+  }
+
+  .hero-right{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:
+      clamp(46px,10vw,76px);
+
+    letter-spacing:-3.5px;
+
+    line-height:.96;
+  }
+
+  .hero-description{
+    max-width:680px;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-top:23px;
+  }
+
+  .hero-buttons{
+    margin-top:28px;
+  }
+
+  .hero-socials{
+    margin-top:25px;
+  }
+
+  .scroll-indicator{
+    bottom:18px;
+  }
+
+  .section-heading{
+    grid-template-columns:42px 1fr;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+
+    gap:50px;
+  }
+
+  .expertise-grid{
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    background:transparent;
+  }
+
+  .service-card{
+    min-height:330px;
+
+    border:
+      1px solid var(--border);
+
+    border-radius:18px;
+  }
+
+  .certificate-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .certificate-intro{
+    margin-left:42px;
+  }
+
+  .project,
+  .project.reverse{
+    grid-template-columns:1fr;
+
+    gap:32px;
+  }
+
+  .project.reverse .project-image{
+    order:0;
+  }
+
+  .project-image{
+    height:
+      min(52vw,380px);
+
+    min-height:280px;
+  }
+
+  .timeline::before{
+    left:0;
+  }
+
+  .timeline-item{
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+    padding-left:28px;
+  }
+
+  .timeline-dot{
+    left:0;
+  }
+
+  .timeline-content{
+    padding-left:0;
+  }
+
+  .contact-grid{
+    gap:45px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+  .hero{
+    min-height:100svh;
+
+    padding-top:86px;
+
+    padding-bottom:78px;
+  }
+
+  .hero-container{
+    width:
+      calc(100% - 32px);
+
+    padding-top:0;
+  }
+
+  .eyebrow{
+    font-size:8px;
+
+    letter-spacing:1.8px;
+
+    margin-bottom:13px;
+  }
+
+  .hero h1{
+    font-size:
+      clamp(40px,12vw,58px);
+
+    letter-spacing:-2.7px;
+
+    line-height:.98;
+  }
+
+  .hero-description{
+    font-size:13px;
+
+    line-height:1.7;
+
+    margin-top:20px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:9px;
+
+    margin-top:25px;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    justify-content:center;
+
+    width:100%;
+
+    min-height:48px;
+  }
+
+  .hero-socials{
+    margin-top:22px;
+
+    margin-bottom:24px;
+  }
+
+  .scroll-indicator{
+    font-size:7px;
+
+    bottom:14px;
+
+    gap:9px;
+  }
+
+  .scroll-indicator div{
+    width:30px;
+  }
+
+  .marquee-section{
+    padding:13px 0;
+  }
+
+  .marquee{
+    gap:18px;
+
+    font-size:9px;
+  }
+
+  .section{
+    width:
+      calc(100% - 32px);
+
+    padding:78px 0;
+  }
+
+  .section-heading{
+    grid-template-columns:28px 1fr;
+
+    margin-bottom:38px;
+  }
+
+  .section-heading h2{
+    font-size:
+      clamp(32px,9.5vw,42px);
+
+    letter-spacing:-2px;
+  }
+
+  .section-heading .eyebrow{
+    margin-bottom:10px;
+  }
+
+  .large-text{
+    font-size:21px;
+  }
+
+  .about-grid,
+  .contact-grid{
+    gap:40px;
+  }
+
+  .about-stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:20px 7px;
+  }
+
+  .stat strong{
+    font-size:32px;
+  }
+
+  .stat span{
+    font-size:8px;
+
+    line-height:1.45;
+  }
+
+  .expertise{
+    padding-left:16px;
+
+    padding-right:16px;
+  }
+
+  .expertise .section-heading{
+    width:100%;
+  }
+
+  .expertise-grid{
+    grid-template-columns:1fr;
+
+    gap:10px;
+  }
+
+  .service-card{
+    min-height:0;
+
+    padding:25px;
+  }
+
+  .service-label{
+    margin-top:56px;
+  }
+
+  .service-card h3{
+    font-size:23px;
+  }
+
+  .service-card p{
+    font-size:13px;
+  }
+
+  .certificate-intro{
+    width:100%;
+
+    margin:
+      0 0 30px;
+  }
+
+  .certificate-grid{
+    grid-template-columns:1fr;
+  }
+
+  .certificate-card{
+    border-radius:15px;
+  }
+
+  .project-image{
+    height:260px;
+
+    min-height:0;
+
+    border-radius:13px;
+  }
+
+  .project-info h3{
+    font-size:28px;
+
+    letter-spacing:-1.3px;
+  }
+
+  .project-info p{
+    font-size:13px;
+  }
+
+  .projects-list{
+    gap:68px;
+  }
+
+  .timeline-item{
+    padding-left:22px;
+
+    padding-top:23px;
+
+    padding-bottom:23px;
+  }
+
+  .timeline-date{
+    font-size:8px;
+  }
+
+  .timeline-content h3{
+    font-size:21px;
+  }
+
+  .timeline-content p{
+    font-size:13px;
+  }
+
+  .cta{
+    min-height:480px;
+
+    padding:45px 16px;
+  }
+
+  .cta h2{
+    font-size:
+      clamp(40px,11.5vw,58px);
+
+    letter-spacing:-2.7px;
+  }
+
+  .cta-glow{
+    width:300px;
+    height:300px;
+  }
+
+  .email-link{
+    font-size:18px;
+
+    overflow-wrap:anywhere;
+  }
+
+  .footer-top{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+
+    gap:9px;
+
+    line-height:1.5;
+  }
+
+  .cursor{
+    display:none!important;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media(max-width:390px){
+
+  .hero{
+    min-height:100svh;
+
+    padding-top:82px;
+
+    padding-bottom:72px;
+  }
+
+  .hero-container{
+    width:
+      calc(100% - 24px);
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .hero-description{
+    font-size:12px;
+  }
+
+  .section{
+    width:
+      calc(100% - 24px);
+
+    padding:68px 0;
+  }
+
+  .section-heading{
+    grid-template-columns:24px 1fr;
+  }
+
+  .section-heading h2{
+    font-size:31px;
+  }
+
+  .service-card{
+    padding:22px;
+  }
+
+  .service-card h3{
+    font-size:22px;
+  }
+
+  .project-info h3{
+    font-size:26px;
+  }
+
+  .project-image{
+    height:235px;
+  }
+
+  .certificate-content{
+    padding:18px;
+  }
+
+  .certificate-content h3{
+    font-size:18px;
+  }
+
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media(hover:none),(pointer:coarse){
+
+  .service-card:hover,
+  .primary-btn:hover,
+  .secondary-btn:hover,
+  .hero-socials a:hover{
+    transform:none;
+  }
+
+  .project-overlay{
+    display:none;
+  }
+
+  .cursor{
+    display:none!important;
+  }
+
+  .reveal{
+    transition-duration:.6s;
+  }
+
+}
+
+
+/* =========================================
+   CLIENT REVIEWS
+========================================= */
+
+.client-reviews{
+  position:relative;
+  padding-top:70px;
+}
+
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.review-card{
+  min-height:330px;
+  padding:32px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  background:
+    linear-gradient(145deg,#111116,#09090c);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  overflow:hidden;
+  transition:transform .45s ease,border-color .45s ease,background .45s ease;
+}
+
+.review-card::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  top:-90px;
+  right:-90px;
+  border-radius:50%;
+  background:rgba(139,92,246,.12);
+  filter:blur(25px);
+  transition:transform .5s ease;
+}
+
+.review-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(139,92,246,.4);
+  background:linear-gradient(145deg,#15121f,#0b1015);
+}
+
+.review-card:hover::before{
+  transform:scale(1.5);
+}
+
+.review-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  position:relative;
+  z-index:1;
+}
+
+.review-quote{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:64px;
+  line-height:.7;
+  color:var(--accent);
+}
+
+.review-index{
+  color:#555;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.review-text{
+  color:#aaa;
+  font-size:15px;
+  line-height:1.85;
+  margin:30px 0 35px;
+  position:relative;
+  z-index:1;
+}
+
+.review-author{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  position:relative;
+  z-index:1;
+}
+
+.review-avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#050507;
+  font-weight:700;
+  font-size:13px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+
+.review-author strong{
+  display:block;
+  color:#eee;
+  font-size:12px;
+  margin-bottom:4px;
+}
+
+.review-author span{
+  display:block;
+  color:#555;
+  font-size:9px;
+  letter-spacing:.8px;
+}
+
+@media(max-width:900px){
+  .reviews-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .review-card{
+    min-height:300px;
+    padding:25px;
+  }
+}
+
+@media(max-width:600px){
+  .reviews-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .review-card{
+    min-height:280px;
+    padding:24px;
+    border-radius:16px;
+  }
+
+  .review-text{
+    font-size:13px;
+    line-height:1.75;
+    margin:25px 0 30px;
+  }
+
+  .review-quote{
+    font-size:55px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .hero-bg,
+  .cta-glow,
+  .gradient-text,
+  .project-image::after,
+  .marquee,
+  .timeline-dot{
+    animation:none!important;
+  }
+
+  .reveal{
+    transition:none!important;
+
+    opacity:1;
+
+    transform:none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================
+     CUSTOM CURSOR
+========================================= -->
+
+<div class="cursor"></div>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar" id="navbar">
+
+  <div class="nav-container">
+
+    <a href="#home" class="logo">
+      Apurba Mazumder
+    </a>
+
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#home" class="active">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#expertise">Expertise</a>
+
+      <a href="#reviews">Reviews</a>
+
+      <a href="#certificates">Certificates</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <a href="#contact" class="nav-btn">
+
+      Let's Talk
+
+      <span>↗</span>
+
+    </a>
+
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open menu"
+      type="button"
+    >
+
+      <span></span>
+
+      <span></span>
+
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-bg"></div>
+
+
+  <div class="hero-container">
+
+
+    <div class="hero-left">
+
+
+      <p class="eyebrow">
+        DIGITAL MARKETING SPECIALIST • TRAINER • HR &amp; ADMIN
+      </p>
+
+
+      <h1>
+
+        Learn. Grow. Lead.
+
+        <span class="gradient-text">
+          Create digital impact.
+        </span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        I'm Apurba Mazumder, a Digital Marketing Trainer and HR Professional
+        focused on practical learning, professional development, people
+        management and digital growth.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#certificates"
+          class="primary-btn"
+        >
+
+          Explore
+
+          <span>↗</span>
+
+        </a>
+
+
+        <a
+          href="https://bd.linkedin.com/in/apurba-mazumder176" target="_blank" rel="noopener"
+          class="secondary-btn"
+        >
+
+          Let's Connect
+
+        </a>
+
+      </div>
+
+
+      <div class="hero-socials">
+
+        <a
+          href="https://www.facebook.com/apurba.mazumder176" target="_blank" rel="noopener"
+          aria-label="Facebook"
+        >
+          f
+        </a>
+
+        <a
+          href="https://bd.linkedin.com/in/apurba-mazumder176" target="_blank" rel="noopener"
+          aria-label="LinkedIn"
+        >
+          in
+        </a>
+
+        <a
+          href="#"
+          aria-label="Instagram"
+        >
+          ig
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="hero-right">
+
+      <div class="hero-card">
+
+
+        <div class="card-top">
+
+          <span>
+            
+          </span>
+
+          <span>
+            
+          </span>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+          <img
+            src="DSC08227.JPG"
+            alt="Apurba Mazumder"
+            loading="eager"
+          >
+
+          <div class="hero-photo-overlay"></div>
+
+        </div>
+
+
+        <div class="card-bottom">
+
+          <span>
+           Digital Marketing Trainer & HR Professional
+          </span>
+
+          <span>
+        
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <a
+    href="#about"
+    class="scroll-indicator"
+    aria-label="Scroll to About section"
+  >
+
+    <span>
+      EXPLORE
+    </span>
+
+    <div>
+      <i></i>
+    </div>
+
+  </a>
+
+
+</section>
+
+
+<!-- =========================================
+     MARQUEE
+========================================= -->
+
+<section class="marquee-section">
+
+  <div class="marquee">
+
+    <span>SEO</span>
+
+    <i>✦</i>
+
+    <span>DIGITAL MARKETING SPECIALIST</span>
+
+    <i>✦</i>
+
+    <span>CONTENT WRITER</span>
+
+    <i>✦</i>
+
+    <span>WEB DESIGNER</span>
+
+    <i>✦</i>
+
+    <span>AI</span>
+
+    <i>✦</i>
+
+    <span>SEO EXPERT</span>
+
+    <i>✦</i>
+
+    <span>DIGITAL MARKETER</span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section
+  class="section about"
+  id="about"
+>
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      01
+    </span>
+
+
+    <div>
+
+      <p class="eyebrow">
+        ABOUT ME
+      </p>
+
+
+      <h2>
+
+        Building digital experiences
+
+        <span>
+          that matter.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="about-grid">
+
+
+    <div class="about-text reveal">
+
+
+      <p class="large-text">
+
+        I believe great digital marketing isn't just about
+        getting attention — it's about creating
+        <strong>
+          real value, trust and growth.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        I work at the intersection of digital marketing, training,
+        people and administration. I help learners understand
+        complex digital marketing concepts through simple,
+        practical and industry-focused training.
+
+      </p>
+
+
+      <p>
+
+        Alongside training, I contribute to HR and administrative
+        operations including coordination, documentation, communication,
+        training and event support.
+
+      </p>
+
+
+      <a
+        href="#contact"
+        class="text-link"
+      >
+
+        More about me
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+
+    </div>
+
+
+    <div class="about-stats reveal">
+
+
+      <div class="stat">
+
+        <strong>
+          400+
+        </strong>
+
+        <span>
+          Featured Projects
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          5+
+        </strong>
+
+        <span>
+          Int. Certificates
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          4 years of
+        </strong>
+
+        <span>
+          Professional Exprence
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          Focused On
+        </strong>
+
+        <span>
+          Learn • Practice • Improve • Lead
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     EXPERTISE
+========================================= -->
+
+<section
+  class="section expertise"
+  id="expertise"
+>
+
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      02
+    </span>
+
+
+    <div>
+
+      <p class="eyebrow">
+        EXPERTISE
+      </p>
+
+
+      <h2>
+
+        What I teach &amp;
+
+        <span>
+          what I do.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="expertise-grid">
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        01
+      </div>
+
+      <div class="service-icon">
+        ↗
+      </div>
+
+      <div class="service-label">
+        CORE EXPERTISE
+      </div>
+
+      <h3>
+        Digital Marketing
+      </h3>
+
+      <p>
+        Teaching the fundamentals of digital marketing and showing
+        learners how channels work together in real-world situations.
+      </p>
+
+      <div class="tags">
+
+        <span>Strategy</span>
+
+        <span>Growth</span>
+
+        <span>Analytics</span>
+
+      </div>
+
+    </article>
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        02
+      </div>
+
+      <div class="service-icon">
+        ⌕
+      </div>
+
+      <div class="service-label">
+        SEARCH VISIBILITY
+      </div>
+
+      <h3>
+        SEO Expert
+      </h3>
+
+      <p>
+        Teaching keyword research, on-page optimization, content
+        planning and the fundamentals of search visibility.
+      </p>
+
+      <div class="tags">
+
+        <span>On-Page</span>
+
+        <span>Keywords</span>
+
+        <span>Content</span>
+
+      </div>
+
+    </article>
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        03
+      </div>
+
+      <div class="service-icon">
+        ◉
+      </div>
+
+      <div class="service-label">
+        AUDIENCE &amp; COMMUNITY
+      </div>
+
+      <h3>
+        Social Media
+      </h3>
+
+      <p>
+        Teaching social platforms, content strategy, audience
+        engagement and practical campaign planning.
+      </p>
+
+      <div class="tags">
+
+        <span>Facebook</span>
+
+        <span>Instagram</span>
+
+        <span>LinkedIn</span>
+
+      </div>
+
+    </article>
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        04
+      </div>
+
+      <div class="service-icon">
+        ⌘
+      </div>
+
+      <div class="service-label">
+        CONTENT &amp; COMMUNICATION
+      </div>
+
+      <h3>
+        Content Creation
+      </h3>
+
+      <p>
+        Helping learners create useful, strategic and audience-focused
+        content for modern digital platforms.
+      </p>
+
+      <div class="tags">
+
+        <span>Copywriting</span>
+
+        <span>Video</span>
+
+        <span>AI Content</span>
+
+      </div>
+
+    </article>
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        05
+      </div>
+
+      <div class="service-icon">
+        ◫
+      </div>
+
+      <div class="service-label">
+        DIGITAL EXPERIENCE
+      </div>
+
+      <h3>
+        Web Designer
+      </h3>
+
+      <p>
+        Supporting practical digital projects and presenting concepts
+        in clear, useful and industry-focused ways.
+      </p>
+
+      <div class="tags">
+
+        <span>HTML</span>
+
+        <span>CSS</span>
+
+        <span>WordPress</span>
+
+      </div>
+
+    </article>
+
+
+    <article class="service-card reveal">
+
+      <div class="service-number">
+        06
+      </div>
+
+      <div class="service-icon">
+        ✦
+      </div>
+
+      <div class="service-label">
+        MODERN WORKFLOW
+      </div>
+
+      <h3>
+        AI &amp; Automation
+      </h3>
+
+      <p>
+        Exploring modern AI tools for marketing research, content
+        creation, productivity and strategy.
+      </p>
+
+      <div class="tags">
+
+        <span>AI Tools</span>
+
+        <span>Automation</span>
+
+        <span>Prompting</span>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CLIENT REVIEWS
+========================================= -->
+
+<section
+  class="section client-reviews"
+  id="reviews"
+>
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      03
+    </span>
+
+    <div>
+
+      <p class="eyebrow">
+        CLIENT REVIEWS
+      </p>
+
+      <h2>
+        What people say
+        <span>
+          about my work.
+        </span>
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="reviews-grid">
+
+    <article class="review-card reveal">
+
+      <div class="review-top">
+        <span class="review-quote">“</span>
+        <span class="review-index">01</span>
+      </div>
+
+      <p class="review-text">
+        Apurba explains digital marketing in a simple and practical way.
+        The sessions are easy to understand and focused on real-world learning.
+      </p>
+
+      <div class="review-author">
+        <div class="review-avatar">C</div>
+        <div>
+          <strong>Client / Student</strong>
+          <span>Digital Marketing Training</span>
+        </div>
+      </div>
+
+    </article>
+
+
+    <article class="review-card reveal">
+
+      <div class="review-top">
+        <span class="review-quote">“</span>
+        <span class="review-index">02</span>
+      </div>
+
+      <p class="review-text">
+        His approach is professional, organized and practical. He makes complex
+        topics easier to understand and always focuses on useful outcomes.
+      </p>
+
+      <div class="review-author">
+        <div class="review-avatar">C</div>
+        <div>
+          <strong>Client / Colleague</strong>
+          <span>Professional Collaboration</span>
+        </div>
+      </div>
+
+    </article>
+
+
+    <article class="review-card reveal">
+
+      <div class="review-top">
+        <span class="review-quote">“</span>
+        <span class="review-index">03</span>
+      </div>
+
+      <p class="review-text">
+        Clear communication, practical guidance and a strong understanding of
+        digital tools. Working with Apurba has been a positive experience.
+      </p>
+
+      <div class="review-author">
+        <div class="review-avatar">C</div>
+        <div>
+          <strong>Client / Learner</strong>
+          <span>Digital Growth &amp; Learning</span>
+        </div>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CERTIFICATES
+========================================= -->
+
+<section
+  class="section certificates"
+  id="certificates"
+>
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      04
+    </span>
+
+
+    <div>
+
+      <p class="eyebrow">
+        CERTIFICATIONS
+      </p>
+
+
+      <h2>
+
+        Proof of my
+
+        <span>
+          learning.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <p class="certificate-intro reveal">
+
+    A selection of professional certifications and courses that
+    support my work in digital marketing, SEO, AI, content and
+    web development.
+
+  </p>
+
+
+  <div class="certificate-grid">
+
+
+    <article class="certificate-card reveal">
+
+      <a
+        href="https://www.udemy.com/certificate/UC-072c412c-652c-4c06-9bad-57fa019147e9/" target="_blank" rel="noopener"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="certificate-image">
+
+          <img
+            src="https://udemy-certificate.s3.amazonaws.com/image/UC-072c412c-652c-4c06-9bad-57fa019147e9.jpg"
+            alt="Keyword Research From Scratch. Unlock New SEO Opportunities Certificate"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="certificate-content">
+
+          <h3>
+            Keyword Research From Scratch. Unlock New SEO Opportunities
+          </h3>
+
+          <p>
+            This certificate above verifies that Apurba Mazumder successfully completed the course Keyword Research From Scratch. Unlock New SEO Opportunities on 05/18/2026 as taught by Anton Voroniuk, Anton Voroniuk Support on Udemy. The certificate indicates the entire course was completed as validated by the student. The course length represents the total hours of the videos and article lectures of the course at the time of most recent completion.
+          </p>
+
+          <span class="certificate-badge">
+            VIEW CERTIFICATE ↗
+          </span>
+
+        </div>
+
+      </a>
+
+    </article>
+
+
+    <article class="certificate-card reveal">
+
+      <a
+        href="https://www.udemy.com/certificate/UC-54520605-592e-4971-8f41-cb7d9cfba015/" target="_blank" rel="noopener"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="certificate-image">
+
+          <img
+            src="https://udemy-certificate.s3.amazonaws.com/image/UC-54520605-592e-4971-8f41-cb7d9cfba015.jpg"
+            alt="SEO Certificate"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="certificate-content">
+
+          <h3>
+            Facebook Marketing 2026. Promote Your Business on Facebook Certificate
+          </h3>
+
+          <p>
+            This certificate above verifies that Apurba Mazumder successfully completed the course Facebook Marketing 2026. Promote Your Business on Facebook! on 05/28/2026 as taught by Anton Voroniuk, Vlad Bogutskiy, Anton Voroniuk Support on Udemy. The certificate indicates the entire course was completed as validated by the student. The course length represents the total hours of the videos and article lectures of the course at the time of most recent completion.
+          </p>
+
+          <span class="certificate-badge">
+            VIEW CERTIFICATE ↗
+          </span>
+
+        </div>
+
+      </a>
+
+    </article>
+
+
+    <article class="certificate-card reveal">
+
+      <a
+        href="https://www.udemy.com/certificate/UC-a4acf279-36e3-429e-ad93-9e9077d34abd/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="certificate-image">
+
+          <img
+            src="https://udemy-certificate.s3.amazonaws.com/image/UC-a4acf279-36e3-429e-ad93-9e9077d34abd.jpg"
+            alt="MULTIMEDIA: COMPLETE GENERATIVE AI COURSE for Video & Images"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="certificate-content">
+
+          <h3>
+            MULTIMEDIA: COMPLETE GENERATIVE AI COURSE for Video & Images
+          </h3>
+
+          <p>
+            This certificate above verifies that Apurba Mazumder successfully completed the course MULTIMEDIA: COMPLETE GENERATIVE AI COURSE for Video & Images on 07/15/2026 as taught by Paul Ashun on Udemy. The certificate indicates the entire course was completed as validated by the student. The course length represents the total hours of the videos and article lectures of the course at the time of most recent completion.
+          </p>
+
+          <span class="certificate-badge">
+            VIEW CERTIFICATE ↗
+          </span>
+
+        </div>
+
+      </a>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     EXPERIENCE
+========================================= -->
+
+<section
+  class="section experience"
+  id="experience"
+>
+
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      05
+    </span>
+
+
+    <div>
+
+      <p class="eyebrow">
+        JOURNEY
+      </p>
+
+
+      <h2>
+
+        My professional
+
+        <span>
+          journey.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="timeline">
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-date">
+        2026 — PRESENT
+      </div>
+
+
+      <div class="timeline-dot"></div>
+
+
+      <div class="timeline-content">
+
+        <h3>
+          Digital Marketing Trainer
+        </h3>
+
+
+        <p>
+
+          E-Learning &amp; Earning Ltd. — practical digital marketing
+          training covering fundamentals, SEO, social media, content,
+          digital advertising, AI tools, practical strategy and
+          student mentoring.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-date">
+        CURRENT
+      </div>
+
+
+      <div class="timeline-dot"></div>
+
+
+      <div class="timeline-content">
+
+        <h3>
+          Head Of HR &amp; Administration
+        </h3>
+
+
+        <p>
+
+          Den Technical Institute — HR and administrative support,
+          team coordination, documentation, communication, training
+          and event coordination, and day-to-day organizational support.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-date">
+        EARLIER
+      </div>
+
+
+      <div class="timeline-dot"></div>
+
+
+      <div class="timeline-content">
+
+        <h3>
+          Training &amp; Knowledge Sharing
+        </h3>
+
+
+        <p>
+
+          Practical learning and knowledge sharing across digital
+          marketing fundamentals, SEO, social media, content marketing
+          and AI for digital marketing.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta">
+
+  <div class="cta-glow"></div>
+
+
+  <div class="cta-content reveal">
+
+    <p class="eyebrow">
+      HAVE A PROJECT?
+    </p>
+
+
+    <h2>
+
+      Let's create something
+
+      <span>
+        great together.
+      </span>
+
+    </h2>
+
+
+    <a
+      href="mailto:your@email.com"
+      class="primary-btn"
+    >
+
+      Start a Conversation
+
+      <span>
+        ↗
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+  class="section contact"
+  id="contact"
+>
+
+
+  <div class="section-heading reveal">
+
+    <span class="section-number">
+      06
+    </span>
+
+
+    <div>
+
+      <p class="eyebrow">
+        CONTACT
+      </p>
+
+
+      <h2>
+
+        Let's talk about
+
+        <span>
+          your idea.
+        </span>
+
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+
+    <div class="contact-left reveal">
+
+
+      <p>
+
+        Whether you have a project, collaboration idea or simply
+        want to talk about digital marketing, feel free to reach out.
+
+      </p>
+
+
+      <a
+        href="mailto:your@email.com"
+        class="email-link"
+      >
+
+       mazumderapurba.elel@gmail.com
+
+        <span>
+          ↗
+        </span>
+
+      </a>
+
+
+    </div>
+
+
+    <form
+      class="contact-form reveal"
+      id="contactForm"
+    >
+
+
+      <div class="input-group">
+
+        <label>
+          Your Name
+        </label>
+
+        <input
+          type="text"
+          placeholder="John Doe"
+          required
+        >
+
+      </div>
+
+
+      <div class="input-group">
+
+        <label>
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          placeholder="yourmail@example.com"
+          required
+        >
+
+      </div>
+
+
+      <div class="input-group">
+
+        <label>
+          Tell me about your project
+        </label>
+
+        <textarea
+          rows="5"
+          placeholder="I'd like to discuss..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="primary-btn form-btn"
+      >
+
+        Send Message
+
+        <span>
+          ↗
+        </span>
+
+      </button>
+
+
+    </form>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+  <div class="footer-top">
+
+
+    <a
+      href="#home"
+      class="logo"
+    >
+
+      Apurba Mazumder<span>.</span>
+
+    </a>
+
+
+    <p>
+      Digital marketing, creativity &amp; technology.
+    </p>
+
+
+    <div class="footer-socials">
+
+      <a href="https://bd.linkedin.com/in/apurba-mazumder176" target="_blank" rel="noopener">
+        in
+      </a>
+
+      <a href="https://www.facebook.com/apurba.mazumder176" target="_blank" rel="noopener">
+        f
+      </a>
+
+      <a href="#">
+        ig
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+
+    <span>
+
+      © <span id="year"></span>
+      Apurba Mazumder
+
+    </span>
+
+
+    <span>
+      Designed &amp; built with purpose.
+    </span>
+
+
+  </div>
+
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+const navbar =
+  document.getElementById("navbar");
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinksEl =
+  document.getElementById("navLinks");
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+if(menuBtn && navLinksEl){
+
+  menuBtn.addEventListener(
+    "click",
+    () => {
+
+      const open =
+        navLinksEl.classList.toggle(
+          "mobile-open"
+        );
+
+      menuBtn.classList.toggle(
+        "open",
+        open
+      );
+
+      document.body.classList.toggle(
+        "menu-open",
+        open
+      );
+
+    }
+  );
+
+
+  navLinksEl
+    .querySelectorAll("a")
+    .forEach(link => {
+
+      link.addEventListener(
+        "click",
+        () => {
+
+          navLinksEl.classList.remove(
+            "mobile-open"
+          );
+
+          menuBtn.classList.remove(
+            "open"
+          );
+
+          document.body.classList.remove(
+            "menu-open"
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+/* =========================================
+   NAVBAR SCROLL
+========================================= */
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    navbar.classList.toggle(
+      "scrolled",
+      window.scrollY > 50
+    );
+
+  }
+);
+
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+const cursor =
+  document.querySelector(".cursor");
+
+document.addEventListener(
+  "mousemove",
+  event => {
+
+    if(cursor){
+
+      cursor.style.left =
+        event.clientX + "px";
+
+      cursor.style.top =
+        event.clientY + "px";
+
+    }
+
+  }
+);
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(
+        entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add(
+              "visible"
+            );
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold:.12
+    }
+  );
+
+
+revealElements.forEach(
+  element => {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections =
+  document.querySelectorAll(
+    "section[id]"
+  );
+
+const navLinks =
+  document.querySelectorAll(
+    ".nav-links a"
+  );
+
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    let current = "";
+
+    sections.forEach(
+      section => {
+
+        if(
+          window.scrollY >=
+          section.offsetTop - 200
+        ){
+
+          current =
+            section.getAttribute("id");
+
+        }
+
+      }
+    );
+
+
+    navLinks.forEach(
+      link => {
+
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") ===
+          "#" + current
+        );
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================
+   DYNAMIC YEAR
+========================================= */
+
+document.getElementById(
+  "year"
+).textContent =
+  new Date().getFullYear();
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const form =
+  document.getElementById(
+    "contactForm"
+  );
+
+
+if(form){
+
+  form.addEventListener(
+    "submit",
+    event => {
+
+      event.preventDefault();
+
+
+      const button =
+        form.querySelector(
+          "button"
+        );
+
+
+      button.innerHTML =
+        "Message Ready ✓";
+
+
+      button.style.background =
+        "#fff";
+
+
+      setTimeout(
+        () => {
+
+          button.innerHTML =
+            'Send Message <span>↗</span>';
+
+          button.style.background =
+            "";
+
+          form.reset();
+
+        },
+        2500
+      );
+
+    }
+  );
+
+}
+
+</script>
+
+</body>
+</html>
